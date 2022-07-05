@@ -15,4 +15,7 @@ with open(filename,'r',encoding="utf-8") as csvfile:
 
     # get total number of rows
     print(f'total no of rows {csv_reader.line_num}')
-    print(rows[:5])
+    for row in rows[:5]:
+        for col in row:
+            print(f"{col}", end="|")
+        print()
